@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 	<title>Home Insurance Form</title>
-
-
 	<!-- CSS Stylesheets -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/get-quote-style.css" />
 	<link rel="stylesheet" type="text/css" href="css/navbar.css" />
-
-
 	<!--Font Styles -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-
-
 	<!--Favicon -->
 	<link href="images/insurance-broker-favicon.jpg" rel="icon">
-
 </head>
-
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<div class="container-fluid" id="banner">
 		<div class="top-banner">
@@ -59,774 +48,389 @@
 				<li><a href="/car-insurance.html">CAR INSURANCE</a></li>
 				<li><a href="/home-insurance.html">HOME INSURANCE</a></li>
 				<li><a href="/combined-insurance.html">COMBINED INSURANCE</a></li>
-				<li><a href="blog.html">BLOG</a></li>
+				<li><a href="/blog.html">BLOG</a></li>
 				<li><a href="/contact.html">CONTACT US</a></li>
 				<li><a class="highlighted" href="/get-a-free-broker.html"><span style="color:#46556D">GET A FREE BROKER</span></a></li>
 			</ul>
 		</div>
 	</nav>
 	<!--- /.nav-->
-
 	<div class="questionnaire">
-
 		<h2>COMBINED INSURANCE</h2>
-
 		<p align="center">(2 Minute Questionnaire Form)<br />
 			Contact us for any questions: 555-555-5555</p>
-
 	</div>
 	<!--- /.questionnaire-->
-
-
 	<div id="contact-form">
-
 		<div class="row">
-
 			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> <br />
-
-
 				<!--Form Success Message will display here-->
 				<strong>
 					<?html echo $result; ?> </strong>
-
 				<form method="post"><br />
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Full Name:</label>
-
 						<input type="text" name="name" class="form-control" required value="" />
-
 					</div>
 					<!--- /full name-->
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Title</label>
-
 						<select align="center" name="title" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Mr</option>
 							<option>Mrs</option>
 							<option>Miss</option>
 							<option>Ms</option>
-
 						</select>
-
 					</div>
 					<!--- /title-->
-
 					<div class="form-group center-block">
-
 						<label class="form-question">ID Number:</label>
-
 						<input type="text" class="form-control" name="idnumber" value="" />
-
 					</div>
 					<!--end Id Number-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Marital Status</label>
-
 						<select align="center" name="marital-status" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Married</option>
 							<option>Single</option>
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Employment Status</label>
-
 						<select align="center" name="employment-status" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Employed</option>
 							<option>Unemployed</option>
-
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Email Address:</label>
-
 						<input type="email" name="email" required class="form-control" value="" />
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Work Telephone:</label>
-
 						<input type="tel" name="workphone" class="form-control" value="" />
-
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Cell Number:</label>
-
 						<input type="tel" name="cellphone" class="form-control" value="" />
-
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Home Address:</label>
-
 						<textarea class="form-control" name="home-address"></textarea><br />
-
 					</div>
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Risk Home Address:</label>
-
 						<textarea class="form-control" name="risk-address"> </textarea><br />
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Insured Age:</label>
-
 						<input type="text" class="form-control" name="insured-age" value="">
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">House Description:</label>
-
 						<select align="center" name="house-description" class="form-control form-group" value="" />
-
 						<option disabled selected><strong>Select</strong></option>
-
 						<option>Apartment</option>
 						<option>House</option>
 						<option>Town House</option>
-
 						</select>
-
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Area Situated</label>
-
 						<select align="center" name="area" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Residential</option>
 							<option>Other</option>
-
 						</select>
-
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Is this a holiday home?</label>
-
 						<select align="center" name="holiday-home" class="form-control form-group" value="" />
-
 						<option disabled selected><strong>Select</strong></option>
-
 						<option>Yes</option>
 						<option>No</option>
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Is theft cover included?</label>
-
 						<select align="center" name="theft-cover" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Type of cover</label>
-
 						<select align="center" name="area" class="form-control form-group" value="" />
-
 						<option disabled selected><strong>Select</strong></option>
-
 						<option>Household</option>
 						<option>Home</option>
 						<option>Household &amp; Home</option>
-
 						</select>
-
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Is the home near open fields?</label>
-
 						<select align="center" name="fields" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Are you a pensioner?</label>
-
 						<select align="center" name="pensioner" class="form-control form-group" value="" />
-
 						<option disabled selected><strong>Select</strong></option>
-
 						<option>Yes</option>
 						<option>No</option>
-
 						</select>
-
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Is the roof thatched?</label>
-
 						<select align="center" name="thatch" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
-
 						</select>
-
 					</div>
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Is the home in secured complex? </label>
-
 						<select align="center" name="secure-complex" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Does the home have an alarm?</label>
-
 						<select align="center" name="alarm" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">If “Yes to the above, is the alarm linked to armed response?</label>
-
 						<select align="center" name="armed-response" class="form-control form-group" value="">
-
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Going away in next 30 days?</label>
-
 						<select align="center" name="armed-response" class="form-control form-group" value="">
-
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Non-standard construction?</label>
-
 						<select align="center" name="construction" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Burglar bars on opening windows?</label>
-
 						<select align="center" name="burglar-bars" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Security gates on external doors?</label>
-
 						<select align="center" name="security-gates" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Have you previously had Insurance?</label>
-
 						<select align="center" name="previous-insurance" class="form-control form-group" value="">
-
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
-
 					</div>
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">If Yes, with which companies?</label>
-
 						<input type="text" class="form-control" name="company" value="">
-
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Have you ever claimed from insurance?</label>
-
 						<select align="center" name="house-claim" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
-
 					<div class="form-group center-block">
-
 						<label class="form-question">If Yes, how many years have passed since you have submitted a claim?</label>
-
 						<input type="text" class="form-control" name="house-claim-years" value="">
-
-
 					</div>
 					<!--end claimed-years-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Car Year:</label>
-
 						<input type="text" class="form-control" name="caryear" value="">
-
-
 					</div>
 					<!--end year-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Car Make:</label>
-
 						<input type="text" class="form-control" name="make" value="">
-
-
 					</div>
 					<!--end car make-->
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Car Model:</label>
-
 						<input type="text" class="form-control" name="model" value="">
-
 					</div>
 					<!--end car model-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Car's Value:</label>
-
 						<div class="input-group">
-
 							<div class="input-group-addon"><strong>R</strong></div>
-
 							<input type="text" class="form-control" name="car-value" value="">
-
 						</div>
-
 					</div>
 					<!--end car value--><br />
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Is vehicle insured currently?</label>
-
 						<select align="center" name="current-insurance" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
 					<!--end current-insurance-->
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Name of Driver:</label>
-
 						<input type="text" class="form-control" name="driver" value="">
-
 					</div>
 					<!--end driver-->
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Birth date of Driver:</label>
-
 						<input type="text" class="form-control" name="dob" value="">
-
 					</div>
 					<!--end dob-->
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Radio insured amount (if applicable)</label>
-
 						<div class="input-group">
-
 							<div class="input-group-addon"><strong>R</strong></div>
-
 							<input type="text" class="form-control" name="amount" value="">
-
 						</div>
-
 					</div>
 					<!--end car value--><br />
-
-
-
 					<div class="form-group center-block">
-
-
 						<label class="form-question">Insurance type</label>
-
 						<select align="center" name="insurance-type" class="form-control form-group" value="" />
-
-
 						<option disabled selected><strong>Select</strong></option>
-
 						<option>Comprehensive</option>
 						<option>Third Party</option>
-
 						</select>
-
 					</div>
 					<!--end insurance-type-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Vehicle use</label>
-
 						<select align="center" name="vehicle-use" class="form-control form-group" value="" />
-
 						<option disabled selected><strong>Select</strong></option>
-
 						<option>Private</option>
 						<option>Business</option>
-
-
 						</select>
-
 					</div>
 					<!--end vehicle-use-->
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Address where vehicle is kept overnight</label>
-
 						<textarea class="form-control" name="car-address"><?html echo $_POST['car-address']; ?> </textarea>
-
 					</div>
 					<!--end car-address-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Type of parking</label>
-
 						<select align="center" name="parking" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Garage</option>
 							<option>Behind Locked Gate(s)</option>
 							<option>Carport</option>
-
 						</select>
-
 					</div>
 					<!--end parking-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Driver’s License code:</label>
-
 						<input type="text" class="form-control" name="license-code" value="">
-
 					</div>
 					<!--end license-code-->
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Date license issued:</label>
-
 						<input type="text" class="form-control" name="license-date" value="">
-
 					</div>
 					<!--end license-date-->
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Tracking device installed:</label>
-
 						<input type="text" class="form-control" name="tracking-device" value="">
-
 					</div>
 					<!--end tracking-device-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Immobiliser fitted:</label>
-
 						<input type="text" class="form-control" name="immobiliser" value="">
-
 					</div>
 					<!--end immobiliser-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Rebuilt/customised vehicle?</label>
-
 						<select align="center" name="customised" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
 						</select>
-
 					</div>
 					<!--end customised-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">The Driver is</label>
-
 						<select align="center" name="driver-option" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>policy holder</option>
 							<option>spouse</option>
-
 						</select>
-
 					</div>
 					<!--end driver-option-->
-
-
 					<div class="form-group center-block">
-
-
 						<label class="form-question">If there are vehicle accessories, please specify</label>
-
 						<input type="text" class="form-control" value="">
-
 					</div>
 					<!--end accessories-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">Have you ever claimed from insurance?</label>
-
 						<select align="center" name="car-claim" class="form-control form-group" value="">
-
 							<option disabled selected><strong>Select</strong></option>
-
 							<option>Yes</option>
 							<option>No</option>
-
-
 						</select>
-
 					</div>
 					<!--end car-claim-->
-
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">If “Yes” to the above, how many years have passed since you have submitted a claim?</label>
-
 						<input type="text" class="form-control" name="car-claim-years" value="">
-
 					</div>
 					<!--end car-claim-years-->
-
-
 					<div class="form-group center-block">
-
 						<label class="form-question">If applicable, please list claims/losses and values for the past 5 years</label>
-
 						<textarea class="form-control" name="claim-list"></textarea><br />
-
 					</div>
 					<!--end claim-list-->
-
-
 					<p align="center"><input type="submit" name="submit" class="btn btn-success btn-lg insurance-form" value="SUBMIT FORM" /> </p><br /><br /><br /><br />
-
-
 				</form>
 				<!--- /form-->
-
 			</div>
 			<!--- /.col-md-->
-
 		</div>
 		<!--- /.row-->
-
 	</div>
 	<!--- /#contact-form-->
-
-
 	<br /><br /><br /><br /><br /><br />
-
-
 	<div align="center" id="footer">
 		<a href="/about.html">ABOUT US</a>
 		<a href="/insurance-faq.html">FAQ</a>
@@ -837,7 +441,6 @@
 		<a href="/contact.html" rel="nofollow">CONTACT US</a>
 	</div>
 	<!--end of footer-->
-
 	<p align="center" class="trading"><br>Trading Hours: Mon-Thu (08:00-16:30), Fridays (08:00-16:00) &nbsp;|&nbsp; After Hours: 555-555-5555</p>
 	<div align="center" class="social-links">
 		<!--LINKED IN SOCIAL ICON-->
@@ -850,14 +453,12 @@
 			</svg></a>
 	</div>
 	<!--end social-link-->
-
 	<div align="center" class="policy-links">
 		<a href="/privacy-policy.html" rel="nofollow">Privacy Policy</a>
 		<a href="/terms-and-conditions.html" rel="nofollow">Terms &amp; Conditions</a>
 	</div>
 	<!--end policy links-->
 	<p align="center" class="text-muted copyright">&copy; InsuranceBroker.com 2018</p>
-
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
 	</script>
@@ -873,5 +474,4 @@
 		});
 	</script>
 </body>
-
 </html>
