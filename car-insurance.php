@@ -99,7 +99,7 @@ an error sending your message. Please try again later.</div>';
 
     <div class="contacting-number">
 
-          <p align="right" class="contactnumber">202-555-0122</p>
+          <p align="right" class="contactnumber">555-555-5555</p>
 
           <p align="right" class="top-quote"><a href="https://insurancebrokerwebsite.com/get-a-free-quote.php">GET A FREE QUOTE</a></p>
 
@@ -425,7 +425,7 @@ an error sending your message. Please try again later.</div>';
   </div><!--end of footer-->
 
 
-        <p align="center" class="trading"><br>Trading Hours: Mon-Thu (08:00-16:30), Fridays (08:00-16:00) &nbsp;|&nbsp; After Hours: +1-202-555-0168</p>
+        <p align="center" class="trading"><br>Trading Hours: Mon-Thu (08:00-16:30), Fridays (08:00-16:00) &nbsp;|&nbsp; After Hours: 555-555-5555</p>
 
 
         <div align="center" class="social-links">
