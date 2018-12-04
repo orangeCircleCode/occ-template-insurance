@@ -32,7 +32,7 @@
 		<div class="top-banner">
 			<div class="contacting-number">
 				<p align="right" class="contactnumber">555-555-5555</p>
-				<p align="right" class="top-quote"><a href="/get-a-free-quote.php">GET A FREE QUOTE</a></p>
+				<p align="right" class="top-quote"><a href="/get-a-free-quote.html">GET A FREE QUOTE</a></p>
 			</div>
 			<div class="row" id="logo-top">
 				<div align="center" class="col-md-6 col-md-offset-3">
@@ -58,12 +58,12 @@
 		</div>
 		<div align="center" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="/car-insurance.php">CAR INSURANCE</a></li>
-				<li><a href="/home-insurance.php">HOME INSURANCE</a></li>
-				<li><a href="/combined-insurance.php">COMBINED INSURANCE</a></li>
+				<li><a href="/car-insurance.html">CAR INSURANCE</a></li>
+				<li><a href="/home-insurance.html">HOME INSURANCE</a></li>
+				<li><a href="/combined-insurance.html">COMBINED INSURANCE</a></li>
 				<li><a href="blog.html">BLOG</a></li>
-				<li><a href="/contact.php">CONTACT US</a></li>
-				<li><a class="highlighted" href="/get-a-free-broker.php"><span style="color:#46556D">GET A FREE BROKER</span></a></li>
+				<li><a href="/contact.html">CONTACT US</a></li>
+				<li><a class="highlighted" href="/get-a-free-broker.html"><span style="color:#46556D">GET A FREE BROKER</span></a></li>
 			</ul>
 		</div>
 	</nav>
@@ -77,8 +77,7 @@
 			<div class="col-md-6 col-md-offset-3">
 
 				<!--Form Success Message will display here-->
-				<p align="center" id="result"><strong>
-						<?php echo $result; ?> </strong></p><br /><br /><br /><br />
+				<p align="center" id="result"><strong></strong></p><br /><br /><br /><br />
 
 
 			</div>
@@ -124,7 +123,7 @@
 
 						<label class="form-question">Current Insurance</label>
 
-						<select align="center" name="current-insurance" class="form-control form-group" value="<?php echo $_POST['current-insurance']; ?>" />
+						<select align="center" name="current-insurance" class="form-control form-group" value="" />
 
 						<option disabled selected><strong>Select</strong></option>
 						<option>Insurance Option 1</option>
@@ -143,7 +142,7 @@
 					<div class="form-group center-block">
 
 						<label class="form-question">Current Policy Number</label>
-						<input type="text" name="policy-number" class="form-control form-group" value="<?php echo $_POST['policy-number']; ?>" />
+						<input type="text" name="policy-number" class="form-control form-group" value="" />
 
 					</div>
 					<!--end policy number-->
@@ -152,7 +151,7 @@
 
 						<label class="form-question">Title</label>
 
-						<select align="center" name="title" class="form-control form-group" value="<?php echo $_POST['title']; ?>" />
+						<select align="center" name="title" class="form-control form-group" value="" />
 
 						<option disabled selected><strong>Select</strong></option>
 						<option>Mr</option>
@@ -169,7 +168,7 @@
 					<div class="form-group center-block">
 
 						<label class="form-question">Initials:</label>
-						<input type="text" name="initials" class="form-control" value="<?php echo $_POST['initials']; ?>" />
+						<input type="text" name="initials" class="form-control" value="" />
 
 					</div>
 					<!--end initials-->
@@ -177,7 +176,7 @@
 
 					<div class="form-group center-block">
 						<label class="form-question">Full Name/Name of Company:</label>
-						<input type="text" class="form-control" name="company-name" value="<?php echo $_POST['company-name']; ?>">
+						<input type="text" class="form-control" name="company-name" value="">
 
 					</div>
 					<!--end company-name-->
@@ -185,7 +184,7 @@
 
 					<div class="form-group center-block">
 						<label class="form-question">Id Number/ Company Registration:</label>
-						<input type="text" class="form-control" name="id-number" value="<?php echo $_POST['id-number']; ?>">
+						<input type="text" class="form-control" name="id-number" value="">
 
 					</div>
 					<!--end id-number-->
@@ -193,21 +192,21 @@
 					<div class="form-group center-block">
 
 						<label class="form-question">Contact Number:</label>
-						<input type="tel" name="phone" class="form-control" value="<?php echo $_POST['phone']; ?>" />
+						<input type="tel" name="phone" class="form-control" value="" />
 
 					</div>
 					<!--end phone-->
 
 					<div class="form-group center-block">
 						<label class="form-question">Risk Address:</label>
-						<textarea class="form-control" name="riskaddress"><?php echo $_POST['riskaddress']; ?> </textarea>
+						<textarea class="form-control" name="riskaddress"> </textarea>
 
 					</div>
 					<!--end Risk Address-->
 
 					<div class="form-group center-block">
 						<label class="form-question">Postal Address:</label>
-						<textarea class="form-control" name="postal-address"><?php echo $_POST['postal-address']; ?> </textarea>
+						<textarea class="form-control" name="postal-address"> </textarea>
 
 					</div>
 					<!--end Postal Address-->
@@ -249,7 +248,7 @@
 
 				<p>Maecenas aliquet, lorem nec aliquam pulvinar, justo mauris aliquet sapien, sit amet maximus odio lacus at ex. Etiam porttitor, metus eu pharetra euismod, massa nibh interdum odio, sit amet feugiat tortor massa non turpis.</p><br>
 
-				<p>Read more about us <a href="https://insurancebrokerwebsite.com/about.html"><strong>here</strong></a>.</p>
+				<p>Read more about us <a href="/about.html"><strong>here</strong></a>.</p>
 
 			</div>
 			<!--end col-md-6-->
@@ -274,7 +273,7 @@
 
 				<p>Etiam porttitor, metus eu pharetra euismod, massa nibh interdum odio, sit amet feugiat tortor massa non turpis. In ac nulla nisl.</p><br>
 
-				<p><a href="https://insurancebrokerwebsite.com/contact.php" rel="nofollow"><strong>Contact us</strong></a> for any questions you may have. We are here to help.</p>
+				<p><a href="/contact.html" rel="nofollow"><strong>Contact us</strong></a> for any questions you may have. We are here to help.</p>
 
 			</div>
 			<!--- /.col-md-6-->
@@ -372,10 +371,10 @@
 		<a href="/about.html">ABOUT US</a>
 		<a href="/insurance-faq.html">FAQ</a>
 		<a href="/insurance-resources.html">RESOURCES</a>
-		<a href="/car-insurance.php">CAR INSURANCE</a>
-		<a href="/home-insurance.php">HOME INSURANCE</a>
-		<a href="/combined-insurance.php">COMBINED INSURANCE</a>
-		<a href="/contact.php" rel="nofollow">CONTACT US</a>
+		<a href="/car-insurance.html">CAR INSURANCE</a>
+		<a href="/home-insurance.html">HOME INSURANCE</a>
+		<a href="/combined-insurance.html">COMBINED INSURANCE</a>
+		<a href="/contact.html" rel="nofollow">CONTACT US</a>
 	</div>
 	<!--end of footer-->
 
