@@ -6,185 +6,190 @@ if ($_POST["submit"]) {
 
 
 
-      
-
-      
-
-     if (!$_POST['name']) {
 
 
 
-       $error="<br />Please enter your name";
+
+	if (!$_POST['name']) {
 
 
 
-     }
-
-      
-
-     if (!$_POST['email']) {
+		$error = "<br />Please enter your name";
 
 
 
-       $error.="<br />Please enter your email address";
+	}
 
 
 
-     }
-
-     
-
-      
-
-     if ($_POST['email']!="" AND !filter_var($_POST['email'],
-
-FILTER_VALIDATE_EMAIL)) {
-
-      
-
-     $error.="<br />Please enter a valid email address";
+	if (!$_POST['email']) {
 
 
 
-     }
-
-     
-
-      
-
-     if ($error) {
+		$error .= "<br />Please enter your email address";
 
 
 
- $result='<div class="alert alert-danger"><strong>There were error(s)
-
-in your form:</strong>'.$error.'</div>';
+	}
 
 
 
-     } else {
+
+
+	if ($_POST['email'] != "" and !filter_var(
+		$_POST['email'],
+
+		FILTER_VALIDATE_EMAIL
+	)) {
 
 
 
- if (mail("info@youremail.com", "Combined Insurance Full Form Submission", 
+		$error .= "<br />Please enter a valid email address";
+
+
+
+	}
+
+
+
+
+
+	if ($error) {
+
+
+
+		$result = '<div class="alert alert-danger"><strong>There were error(s)
+
+in your form:</strong>' . $error . '</div>';
+
+
+
+	} else {
+
+
+
+		if (mail(
+			"info@youremail.com",
+			"Combined Insurance Full Form Submission",
     /* ---- Email where you want to recieve the contact messages ---- */
- 
 
-"Name: ".$_POST['name']." 
 
-Email: ".$_POST['email']." 
+			"Name: " . $_POST['name'] . "
 
-Title: ".$_POST['title']." 
+Email: " . $_POST['email'] . "
 
-ID Number: ".$_POST['idnumber']."
+Title: " . $_POST['title'] . "
 
-Marital Status: ".$_POST['marital-status']." 
+ID Number: " . $_POST['idnumber'] . "
 
-Employment Status: ".$_POST['employment-status']." 
+Marital Status: " . $_POST['marital-status'] . "
 
-Work Phone: ".$_POST['workphone']." 
+Employment Status: " . $_POST['employment-status'] . "
 
-Cell Number: ".$_POST['cellphone']." 
+Work Phone: " . $_POST['workphone'] . "
 
-Home Address: ".$_POST['home-address']." 
+Cell Number: " . $_POST['cellphone'] . "
 
-Risk Address: ".$_POST['risk-address']." 
+Home Address: " . $_POST['home-address'] . "
 
-Insured age: ".$_POST['insured-age']."
+Risk Address: " . $_POST['risk-address'] . "
 
-House Description: ".$_POST['house-description']."
+Insured age: " . $_POST['insured-age'] . "
 
-Is this a holiday home: ".$_POST['holiday-home']." 
+House Description: " . $_POST['house-description'] . "
 
-Is theft cover included: ".$_POST['theft-cover']." 
+Is this a holiday home: " . $_POST['holiday-home'] . "
 
-Type of Cover: ".$_POST['cover-type']." 
+Is theft cover included: " . $_POST['theft-cover'] . "
 
-Is the home near open fields?: ".$_POST['fields']." 
+Type of Cover: " . $_POST['cover-type'] . "
 
-Are you a pensioner: ".$_POST['pensioner']." 
+Is the home near open fields?: " . $_POST['fields'] . "
 
-Is the roof thatched: ".$_POST['thatch']." 
+Are you a pensioner: " . $_POST['pensioner'] . "
 
-Is the home in secured complex?: ".$_POST['secure-complex']." 
+Is the roof thatched: " . $_POST['thatch'] . "
 
-Does the home have an alarm: ".$_POST['alarm']." 
+Is the home in secured complex?: " . $_POST['secure-complex'] . "
 
-Armed response?: ".$_POST['armed-response']."
+Does the home have an alarm: " . $_POST['alarm'] . "
 
-Going away in next 30 days: ".$_POST['going-away']."
+Armed response?: " . $_POST['armed-response'] . "
 
-Non-standard construction: ".$_POST['construction']."
+Going away in next 30 days: " . $_POST['going-away'] . "
 
-Burglar bars: ".$_POST['burglar-bars']."
+Non-standard construction: " . $_POST['construction'] . "
 
-Security Gates: ".$_POST['security-gates']."
+Burglar bars: " . $_POST['burglar-bars'] . "
 
-Previous Insurance: ".$_POST['previous-insurance']."
+Security Gates: " . $_POST['security-gates'] . "
 
-Previous Insurance Companies: ".$_POST['company']."
+Previous Insurance: " . $_POST['previous-insurance'] . "
 
-Home Insurance Claims: ".$_POST['house-claim']."
+Previous Insurance Companies: " . $_POST['company'] . "
 
-Home Insurance Claim Years: ".$_POST['house-claim-years']."
+Home Insurance Claims: " . $_POST['house-claim'] . "
 
-Year: ".$_POST['caryear']."
+Home Insurance Claim Years: " . $_POST['house-claim-years'] . "
 
-Car Make: ".$_POST['make']."
+Year: " . $_POST['caryear'] . "
 
-Car Model: ".$_POST['model']."
+Car Make: " . $_POST['make'] . "
 
-Car Value: ".$_POST['car-value']."
+Car Model: " . $_POST['model'] . "
 
-Is Car insured currently: ".$_POST['current-insurance']."
+Car Value: " . $_POST['car-value'] . "
 
-Name of Driver: ".$_POST['driver']."
+Is Car insured currently: " . $_POST['current-insurance'] . "
 
-Birth date of Driver: ".$_POST['dob']."
+Name of Driver: " . $_POST['driver'] . "
 
-Radio insured amount: ".$_POST['amount']."
+Birth date of Driver: " . $_POST['dob'] . "
 
-Insurance type: ".$_POST['insurance-type']."
+Radio insured amount: " . $_POST['amount'] . "
 
-Vehicle use: ".$_POST['vehicle-use']."
+Insurance type: " . $_POST['insurance-type'] . "
 
-Address where vehicle is kept overnight: ".$_POST['car-address']."
+Vehicle use: " . $_POST['vehicle-use'] . "
 
-Type of parking: ".$_POST['parking']."
+Address where vehicle is kept overnight: " . $_POST['car-address'] . "
 
-Driver’s License code: ".$_POST['license-code']."
+Type of parking: " . $_POST['parking'] . "
 
-Date license issued: ".$_POST['license-date']."
+Driver’s License code: " . $_POST['license-code'] . "
 
-Tracking device installed: ".$_POST['tracking-device']."
+Date license issued: " . $_POST['license-date'] . "
 
-Immobiliser fitted: ".$_POST['immobiliser']."
+Tracking device installed: " . $_POST['tracking-device'] . "
 
-Rebuilt/customised vehicle: ".$_POST['customised']."
+Immobiliser fitted: " . $_POST['immobiliser'] . "
 
-Driver is: ".$_POST['driver-option']."
+Rebuilt/customised vehicle: " . $_POST['customised'] . "
 
-Vehicle accessories: ".$_POST['accessories']."
+Driver is: " . $_POST['driver-option'] . "
 
-Car Insurance claimed: ".$_POST['car-claim']."
+Vehicle accessories: " . $_POST['accessories'] . "
 
-Years passed since insurance claimed: ".$_POST['car-claim-years']."
+Car Insurance claimed: " . $_POST['car-claim'] . "
 
-List of claims/losses: ".$_POST['claim-list'])) {
+Years passed since insurance claimed: " . $_POST['car-claim-years'] . "
 
-$result='<div class="alert alert-success"> <strong> Thank
+List of claims/losses: " . $_POST['claim-list']
+		)) {
+
+			$result = '<div class="alert alert-success"> <strong> Thank
 
 you!</strong> We\'ll get back to you shortly.</div>';
 
-} else {
+		} else {
 
-$result='<div class="alert alert-danger">Sorry, there was
+			$result = '<div class="alert alert-danger">Sorry, there was
 
 an error sending your message. Please try again later.</div>';
 
-}
+		}
 
-}
+	}
 
 }
 
@@ -210,7 +215,7 @@ an error sending your message. Please try again later.</div>';
 
       <!--Font Styles -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  
+
 
   <!--Favicon -->
   <link href="images/insurance-broker-favicon.jpg" rel="icon">
@@ -227,7 +232,7 @@ an error sending your message. Please try again later.</div>';
 
           <p align="right" class="contactnumber">202-555-0122</p>
 
-          <p align="right" class="top-quote"><a href="https://insurancebrokerwebsite.com/get-a-free-quote.php">GET A FREE QUOTE</a></p>  
+          <p align="right" class="top-quote"><a href="https://insurancebrokerwebsite.com/get-a-free-quote.php">GET A FREE QUOTE</a></p>
 
       </div><!--contacting-number-->
 
@@ -239,7 +244,7 @@ an error sending your message. Please try again later.</div>';
           <a href="https://insurancebrokerwebsite.com">
 
             <img alt="insurance-broker-logo" class="img-responsive logo" src="images/insurance-broker-logo.png"></a>
-              
+
               <p align="center" class="tagline">You Are Not Just A Number...</p>
 
         </div><!--end of col-md-6-->
@@ -256,9 +261,9 @@ an error sending your message. Please try again later.</div>';
 
       <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
 
-        <span class="sr-only">Toggle navigation</span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span> 
+        <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
            <span class="icon-bar"></span>
 
       </button>
@@ -300,12 +305,12 @@ an error sending your message. Please try again later.</div>';
   </div><!--- /.questionnaire-->
 
 
-  <div id="contact-form"> 
+  <div id="contact-form">
 
     <div class="row">
 
       <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> <br />
-      
+
 
           <!--Form Success Message will display here-->
             <strong> <?php echo $result; ?> </strong>
@@ -418,7 +423,7 @@ an error sending your message. Please try again later.</div>';
 
               <label class="form-question">Risk Home Address:</label>
 
-                <textarea class="form-control" name="risk-address"> <?php echo $_POST['risk-address']; ?> </textarea><br /> 
+                <textarea class="form-control" name="risk-address"> <?php echo $_POST['risk-address']; ?> </textarea><br />
             </div>
 
             <div class="form-group center-block">
@@ -465,7 +470,7 @@ an error sending your message. Please try again later.</div>';
 
               <label class="form-question">Is this a holiday home?</label>
 
-                <select align="center" name="holiday-home" class="form-control form-group" value="<?php echo $_POST['holiday-home']; ?>" /> 
+                <select align="center" name="holiday-home" class="form-control form-group" value="<?php echo $_POST['holiday-home']; ?>" />
 
                     <option disabled selected><strong>Select</strong></option>
 
@@ -481,7 +486,7 @@ an error sending your message. Please try again later.</div>';
 
               <label class="form-question">Is theft cover included?</label>
 
-                <select align="center" name="theft-cover" class="form-control form-group" value="<?php echo $_POST['theft-cover']; ?>"> 
+                <select align="center" name="theft-cover" class="form-control form-group" value="<?php echo $_POST['theft-cover']; ?>">
 
                     <option disabled selected><strong>Select</strong></option>
 
@@ -498,7 +503,7 @@ an error sending your message. Please try again later.</div>';
 
               <label class="form-question">Type of cover</label>
 
-                <select align="center" name="area" class="form-control form-group" value="<?php echo $_POST['area']; ?>" /> 
+                <select align="center" name="area" class="form-control form-group" value="<?php echo $_POST['area']; ?>" />
 
                     <option disabled selected><strong>Select</strong></option>
 
@@ -514,7 +519,7 @@ an error sending your message. Please try again later.</div>';
 
               <label class="form-question">Is the home near open fields?</label>
 
-                <select align="center" name="fields" class="form-control form-group" value="<?php echo $_POST['fields']; ?>"> 
+                <select align="center" name="fields" class="form-control form-group" value="<?php echo $_POST['fields']; ?>">
 
                     <option disabled selected><strong>Select</strong></option>
 
@@ -531,7 +536,7 @@ an error sending your message. Please try again later.</div>';
 
               <label class="form-question">Are you a pensioner?</label>
 
-                <select align="center" name="pensioner" class="form-control form-group" value="<?php echo $_POST['pensioner']; ?>" /> 
+                <select align="center" name="pensioner" class="form-control form-group" value="<?php echo $_POST['pensioner']; ?>" />
 
                     <option disabled selected><strong>Select</strong></option>
 
@@ -546,7 +551,7 @@ an error sending your message. Please try again later.</div>';
 
               <label class="form-question">Is the roof thatched?</label>
 
-                <select align="center" name="thatch" class="form-control form-group" value="<?php echo $_POST['thatch']; ?>"> 
+                <select align="center" name="thatch" class="form-control form-group" value="<?php echo $_POST['thatch']; ?>">
 
                     <option disabled selected><strong>Select</strong></option>
 
@@ -581,7 +586,7 @@ an error sending your message. Please try again later.</div>';
 
                     <label class="form-question">Does the home have an alarm?</label>
 
-                        <select align="center" name="alarm" class="form-control form-group" value="<?php echo $_POST['alarm']; ?>" > 
+                        <select align="center" name="alarm" class="form-control form-group" value="<?php echo $_POST['alarm']; ?>" >
 
                             <option disabled selected><strong>Select</strong></option>
 
@@ -598,13 +603,13 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">If “Yes to the above, is the alarm linked to armed response?</label>
 
-                          <select align="center" name="armed-response" class="form-control form-group" value="<?php echo $_POST['armed-response']; ?>"> 
+                          <select align="center" name="armed-response" class="form-control form-group" value="<?php echo $_POST['armed-response']; ?>">
 
 
                               <option disabled selected><strong>Select</strong></option>
 
                                   <option>Yes</option>
-                                  <option>No</option>           
+                                  <option>No</option>
 
                           </select>
 
@@ -615,7 +620,7 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Going away in next 30 days?</label>
 
-                        <select align="center" name="armed-response" class="form-control form-group" value="<?php echo $_POST['armed-response']; ?>"> 
+                        <select align="center" name="armed-response" class="form-control form-group" value="<?php echo $_POST['armed-response']; ?>">
 
 
                             <option disabled selected><strong>Select</strong></option>
@@ -648,7 +653,7 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Burglar bars on opening windows?</label>
 
-                        <select align="center" name="burglar-bars" class="form-control form-group" value="<?php echo $_POST['burglar-bars']; ?>"> 
+                        <select align="center" name="burglar-bars" class="form-control form-group" value="<?php echo $_POST['burglar-bars']; ?>">
 
                             <option disabled selected><strong>Select</strong></option>
 
@@ -681,7 +686,7 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Have you previously had Insurance?</label>
 
-                        <select align="center" name="previous-insurance" class="form-control form-group" value="<?php echo $_POST['previous-insurance']; ?>"> 
+                        <select align="center" name="previous-insurance" class="form-control form-group" value="<?php echo $_POST['previous-insurance']; ?>">
 
 
                             <option disabled selected><strong>Select</strong></option>
@@ -708,13 +713,13 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Have you ever claimed from insurance?</label>
 
-                        <select align="center" name="house-claim" class="form-control form-group" value="<?php echo $_POST['house-claim']; ?>"> 
+                        <select align="center" name="house-claim" class="form-control form-group" value="<?php echo $_POST['house-claim']; ?>">
 
                             <option disabled selected><strong>Select</strong></option>
 
                                 <option>Yes</option>
                                 <option>No</option>
-                        
+
                         </select>
 
                 </div>
@@ -745,7 +750,7 @@ an error sending your message. Please try again later.</div>';
 
                         <input type="text" class="form-control" name="make" value="<?php echo $_POST['make']; ?>">
 
-                
+
                 </div><!--end car make-->
 
 
@@ -778,7 +783,7 @@ an error sending your message. Please try again later.</div>';
 
                     <label class="form-question">Is vehicle insured currently?</label>
 
-                      <select align="center" name="current-insurance" class="form-control form-group" value="<?php echo $_POST['current-insurance']; ?>"> 
+                      <select align="center" name="current-insurance" class="form-control form-group" value="<?php echo $_POST['current-insurance']; ?>">
 
                             <option disabled selected><strong>Select</strong></option>
 
@@ -830,7 +835,7 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Insurance type</label>
 
-                        <select align="center" name="insurance-type" class="form-control form-group" value="<?php echo $_POST['insurance-type']; ?>" /> 
+                        <select align="center" name="insurance-type" class="form-control form-group" value="<?php echo $_POST['insurance-type']; ?>" />
 
 
                               <option disabled selected><strong>Select</strong></option>
@@ -847,13 +852,13 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Vehicle use</label>
 
-                          <select align="center" name="vehicle-use" class="form-control form-group" value="<?php echo $_POST['vehicle-use']; ?>" /> 
+                          <select align="center" name="vehicle-use" class="form-control form-group" value="<?php echo $_POST['vehicle-use']; ?>" />
 
                               <option disabled selected><strong>Select</strong></option>
 
                                     <option>Private</option>
                                     <option>Business</option>
-                       
+
 
                           </select>
 
@@ -874,7 +879,7 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Type of parking</label>
 
-                          <select align="center" name="parking" class="form-control form-group" value="<?php echo $_POST['parking']; ?>"> 
+                          <select align="center" name="parking" class="form-control form-group" value="<?php echo $_POST['parking']; ?>">
 
                               <option disabled selected><strong>Select</strong></option>
 
@@ -929,7 +934,7 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Rebuilt/customised vehicle?</label>
 
-                        <select align="center" name="customised" class="form-control form-group" value="<?php echo $_POST['customised']; ?>"> 
+                        <select align="center" name="customised" class="form-control form-group" value="<?php echo $_POST['customised']; ?>">
 
                               <option disabled selected><strong>Select</strong></option>
 
@@ -951,7 +956,7 @@ an error sending your message. Please try again later.</div>';
 
                                 <option>policy holder</option>
                                 <option>spouse</option>
-                      
+
                         </select>
 
                   </div><!--end driver-option-->
@@ -971,7 +976,7 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">Have you ever claimed from insurance?</label>
 
-                        <select align="center" name="car-claim" class="form-control form-group" value="<?php echo $_POST['car-claim']; ?>" > 
+                        <select align="center" name="car-claim" class="form-control form-group" value="<?php echo $_POST['car-claim']; ?>" >
 
                             <option disabled selected><strong>Select</strong></option>
 
@@ -998,7 +1003,7 @@ an error sending your message. Please try again later.</div>';
 
                       <label class="form-question">If applicable, please list claims/losses and values for the past 5 years</label>
 
-                          <textarea class="form-control" name="claim-list"><?php echo $_POST['claim-list']; ?> </textarea><br /> 
+                          <textarea class="form-control" name="claim-list"><?php echo $_POST['claim-list']; ?> </textarea><br />
 
                   </div><!--end claim-list-->
 
@@ -1022,15 +1027,15 @@ an error sending your message. Please try again later.</div>';
 
     <a href="https://insurancebrokerwebsite.com/about.html">ABOUT US</a>
 
-    <a href="https://insurancebrokerwebsite.com/insurance-faq.html">FAQ</a> 
+    <a href="https://insurancebrokerwebsite.com/insurance-faq.html">FAQ</a>
 
-    <a href="https://insurancebrokerwebsite.com/insurance-resources.html">RESOURCES</a> 
+    <a href="https://insurancebrokerwebsite.com/insurance-resources.html">RESOURCES</a>
 
-    <a href="https://insurancebrokerwebsite.com/car-insurance.php">CAR INSURANCE</a> 
+    <a href="https://insurancebrokerwebsite.com/car-insurance.php">CAR INSURANCE</a>
 
-    <a href="https://insurancebrokerwebsite.com/home-insurance.php">HOME INSURANCE</a> 
+    <a href="https://insurancebrokerwebsite.com/home-insurance.php">HOME INSURANCE</a>
 
-    <a href="https://insurancebrokerwebsite.com/combined-insurance.php">COMBINED INSURANCE</a> 
+    <a href="https://insurancebrokerwebsite.com/combined-insurance.php">COMBINED INSURANCE</a>
 
     <a href="https://insurancebrokerwebsite.com/contact.php" rel="nofollow">CONTACT US</a>
 
@@ -1044,7 +1049,7 @@ an error sending your message. Please try again later.</div>';
 
             <!--LINKED IN SOCIAL ICON-->
           <a href="https://www.linkedin.com/BROKERS-LINKED-IN-ACCOUNT/"><svg height="35" viewbox="0 0 24 24" width="35">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#615F61"></path></svg></a> 
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#615F61"></path></svg></a>
 
             <!--FACEBOOK SOCIAL ICON-->
           <a href="https://www.facebook.com/BROKERS-FACEBOOK-ACCOUNT/" target="_blank"><svg style="width:35px; height:35px" viewbox="0 0 24 24"><path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" fill="#615F61"></path></svg></a>
@@ -1053,7 +1058,7 @@ an error sending your message. Please try again later.</div>';
 
 
   <div align="center" class="policy-links">
-    
+
     <a href="https://insurancebrokerwebsite.com/privacy-policy.html" rel="nofollow">Privacy Policy</a>
 
     <a href="https://insurancebrokerwebsite.com/terms-and-conditions.html" rel="nofollow">Terms &amp; Conditions</a>
@@ -1066,20 +1071,20 @@ an error sending your message. Please try again later.</div>';
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-  </script> 
+  </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
 
    <script src="js/bootstrap.min.js">
-  </script> 
+  </script>
 
-  
-   <!--FIXED NAVBAR SCRIPT--> 
+
+   <!--FIXED NAVBAR SCRIPT-->
   <script>
   $('#topnavbar').affix({
      offset: {
          top: $('#banner').height()
-     }   
-  }); 
+     }
+  });
   </script>
 
 

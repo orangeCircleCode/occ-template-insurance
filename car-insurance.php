@@ -6,57 +6,60 @@ if ($_POST["submit"]) {
 
 
 
-      
 
-      if (!$_POST['phone']) {
 
-     
-
-      $error.="<br /> Please enter your phone number";
-
-     
-
-     }
+	if (!$_POST['phone']) {
 
 
 
-      
-
-          if ($error) {
+		$error .= "<br /> Please enter your phone number";
 
 
 
- $result='<div class="alert alert-danger"><strong>There were error(s)
-
-in your form:</strong>'.$error.'</div>';
+	}
 
 
 
-     } else {
+
+
+	if ($error) {
 
 
 
- if (mail("info@youremail.com", " Call back request from Car Insurance Page", 
+		$result = '<div class="alert alert-danger"><strong>There were error(s)
+
+in your form:</strong>' . $error . '</div>';
+
+
+
+	} else {
+
+
+
+		if (mail(
+			"info@youremail.com",
+			" Call back request from Car Insurance Page",
   /* ---- Email where you want to recieve the contact messages ---- */
- 
-
-"Phone: ".$_POST['phone'])) {
 
 
+			"Phone: " . $_POST['phone']
+		)) {
 
-$result='<div class="alert alert-success"> <strong> Thank
+
+
+			$result = '<div class="alert alert-success"> <strong> Thank
 
 you!</strong> We\'ll get back to you shortly.</div>';
 
-} else {
+		} else {
 
-$result='<div class="alert alert-danger">Sorry, there was
+			$result = '<div class="alert alert-danger">Sorry, there was
 
 an error sending your message. Please try again later.</div>';
 
-}
+		}
 
-}
+	}
 
 }
 
@@ -68,7 +71,7 @@ an error sending your message. Please try again later.</div>';
   <meta charset="utf-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  
+
   <meta content="" name="description">
   <!-- Meta Description -->
 
@@ -98,7 +101,7 @@ an error sending your message. Please try again later.</div>';
 
           <p align="right" class="contactnumber">202-555-0122</p>
 
-          <p align="right" class="top-quote"><a href="https://insurancebrokerwebsite.com/get-a-free-quote.php">GET A FREE QUOTE</a></p>  
+          <p align="right" class="top-quote"><a href="https://insurancebrokerwebsite.com/get-a-free-quote.php">GET A FREE QUOTE</a></p>
 
       </div><!--contacting-number-->
 
@@ -110,7 +113,7 @@ an error sending your message. Please try again later.</div>';
           <a href="https://insurancebrokerwebsite.com">
 
             <img alt="insurance-broker-logo" class="img-responsive logo" src="images/insurance-broker-logo.png"></a>
-              
+
               <p align="center" class="tagline">You Are Not Just A Number...</p>
 
         </div><!--end of col-md-6-->
@@ -128,9 +131,9 @@ an error sending your message. Please try again later.</div>';
 
       <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
 
-        <span class="sr-only">Toggle navigation</span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span> 
+        <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
            <span class="icon-bar"></span>
 
       </button>
@@ -158,7 +161,7 @@ an error sending your message. Please try again later.</div>';
     </div>
 
   </nav><!--- /.nav-->
-  
+
 
   <div id="car-insurance-banner"><br />
 
@@ -209,7 +212,7 @@ an error sending your message. Please try again later.</div>';
 
         <div align="center" class="col-md-4 col-sm-6">
 
-            
+
 		  <img src="images/cheap-car-insurance.png" classs="img-responsive" alt="cheap-car-insurance">
 
 
@@ -328,7 +331,7 @@ an error sending your message. Please try again later.</div>';
 
 
   <div class="insurance-car-img">
-    
+
   </div><!--end accountant-img-->
 
 
@@ -407,15 +410,15 @@ an error sending your message. Please try again later.</div>';
 
       <a href="https://insurancebrokerwebsite.com/about.html">ABOUT US</a>
 
-      <a href="https://insurancebrokerwebsite.com/insurance-faq.html">FAQ</a> 
+      <a href="https://insurancebrokerwebsite.com/insurance-faq.html">FAQ</a>
 
-      <a href="https://insurancebrokerwebsite.com/insurance-resources.html">RESOURCES</a> 
+      <a href="https://insurancebrokerwebsite.com/insurance-resources.html">RESOURCES</a>
 
-      <a href="https://insurancebrokerwebsite.com/car-insurance.php">CAR INSURANCE</a> 
+      <a href="https://insurancebrokerwebsite.com/car-insurance.php">CAR INSURANCE</a>
 
-     <a href="https://insurancebrokerwebsite.com/home-insurance.php">HOME INSURANCE</a> 
+     <a href="https://insurancebrokerwebsite.com/home-insurance.php">HOME INSURANCE</a>
 
-      <a href="https://insurancebrokerwebsite.com/combined-insurance.php">COMBINED INSURANCE</a> 
+      <a href="https://insurancebrokerwebsite.com/combined-insurance.php">COMBINED INSURANCE</a>
 
       <a href="https://insurancebrokerwebsite.com/contact.php" rel="nofollow">CONTACT US</a>
 
@@ -429,7 +432,7 @@ an error sending your message. Please try again later.</div>';
 
             <!--LINKED IN SOCIAL ICON-->
           <a href="https://www.linkedin.com/BROKERS-LINKED-IN-ACCOUNT/"><svg height="35" viewbox="0 0 24 24" width="35">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#615F61"></path></svg></a> 
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#615F61"></path></svg></a>
 
             <!--FACEBOOK SOCIAL ICON-->
           <a href="https://www.facebook.com/BROKERS-FACEBOOK-ACCOUNT/" target="_blank"><svg style="width:35px; height:35px" viewbox="0 0 24 24"><path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" fill="#615F61"></path></svg></a>
@@ -438,7 +441,7 @@ an error sending your message. Please try again later.</div>';
 
 
   <div align="center" class="policy-links">
-    
+
       <a href="https://insurancebrokerwebsite.com/privacy-policy.html" rel="nofollow">Privacy Policy</a>
 
       <a href="https://insurancebrokerwebsite.com/terms-and-conditions.html" rel="nofollow">Terms &amp; Conditions</a>
@@ -451,20 +454,20 @@ an error sending your message. Please try again later.</div>';
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-  </script> 
+  </script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
 
    <script src="js/bootstrap.min.js">
-  </script> 
-  
-  
+  </script>
+
+
    <!--FIXED NAVBAR SCRIPT-->
   <script>
   $('#topnavbar').affix({
      offset: {
          top: $('#banner').height()
-     }   
-  }); 
+     }
+  });
   </script>
 
 
